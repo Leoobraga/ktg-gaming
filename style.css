@@ -1,0 +1,273 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    color: white;
+}
+
+a{
+    font-family: sans-serif;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    font-size:22px;
+}
+
+.header{
+    background: rgba(0, 0, 0, 0.993);
+    padding-inline: 16px;
+    height: 100vh;
+    width: 100%;
+    
+    
+}
+
+.nav{
+    max-width: 1280px;
+    height: 100px;
+    margin-inline: auto;
+    width: 63%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.nav img{
+    width: 80px;
+    height: 80px;
+}
+
+ .list{
+    display: flex;
+    
+    list-style: none;
+    gap: 50px;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #fbd943;
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%
+}
+
+.mobile-menu-icon{
+    display: none;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+.hambu{
+    display: none;
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.jogar{
+    
+
+        width: 100%;
+    max-width: 1200px;
+    
+    display: block;
+    
+}
+
+.jogar-cont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+/*parte 2*/
+
+.header2{
+    background-color:rgba(0, 0, 0, 0.993);
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.h22 {
+    text-decoration: underline #fbd943 ;
+     text-underline-offset: 6px; /* afasta o sublinhado do texto */
+    font-size: 40px;
+}
+
+
+
+.jogos-on{
+    display: flex;
+    height: 600px;
+    width: 1600px;
+    
+   
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.freefire{
+    display: flex;
+    flex: auto;
+    width: 400px;
+    height: 400px;
+}
+
+.brawlstars{
+    display: flex;
+    flex: auto;
+    width: 400px;
+    height: 400px;
+}
+
+.efootball{
+    display: flex;
+    flex: auto;
+    width: 400px;
+    height: 400px;
+}
+
+.fortinite{
+    display: flex;
+    flex: auto;
+    width: 400px;
+    height: 400px;
+}
+
+.jogos-on img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.juego img{
+
+    filter: brightness(60%);
+
+    transition: filter 0.3s ease;
+    
+}
+
+.juego:hover img{
+    filter: brightness(100%);
+}
+
+/*jogadores*/
+
+.mi{
+    
+    
+    padding-left: 40px;
+}
+
+
+.jogadores {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.89);
+    padding: 40px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.jogadores h3 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-decoration: underline #fbd943;
+    text-underline-offset: 6px;
+}
+
+.jogador-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1450px;
+    gap: 40px;
+}
+
+.descricao {
+    flex: 1;
+}
+
+.descricao h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.descricao p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.foto {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.foto img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+@media(max-width: 880px){
+    .list{
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        left:0 ;
+        top: 100px;
+        z-index: 1000;
+        font-size: 70px;
+
+        align-items: center;
+        text-align: center;
+    }
+
+    .list.active{
+        display: flex;
+    }
+
+    .hambu{
+        display: block;
+    }
+}
