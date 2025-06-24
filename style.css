@@ -246,7 +246,7 @@ a:hover::after {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
-@media(max-width: 880px){
+@media(max-width: 100px){
     .list{
         display: none;
         flex-direction: column;
