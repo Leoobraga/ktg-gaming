@@ -382,7 +382,7 @@ a:hover::after {
     }
 
     .foto img {
-        width: 200px;
+        width: 120px;
         height: auto;
         border-radius: 8px;
         box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
