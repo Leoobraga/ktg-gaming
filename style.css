@@ -8,8 +8,9 @@
 
 body{
     font-family: sans-serif;
-    color: white;
+    color: rgb(255, 255, 255);
     overflow-x: hidden;
+    background-color: black;
 }
 
 a{
@@ -111,6 +112,8 @@ a:hover::after {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 200px;
+
     
 }
 
@@ -249,6 +252,7 @@ a:hover::after {
 
 
 @media (max-width: 1200px) {
+    /* NAVBAR */
     .nav {
         justify-content: space-between;
         position: relative;
@@ -294,12 +298,40 @@ a:hover::after {
         display: flex;
     }
 
-    /* 🔽 RESPONSIVO PARA A SEÇÃO LINE-UPS 🔽 */
+    /* HEADER (parte de cima) */
+    .header {
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .jogar-cont {
+        padding: 10px 0;
+    }
+
+    .tex {
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+
+    /* LINE-UPS */
+    .header2 {
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        justify-content: flex-start;
+    }
+
+    .h22 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
     .jogos-on {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
-        padding: 20px;
+        padding: 0 10px;
         gap: 20px;
         height: auto;
         justify-items: center;
@@ -320,6 +352,7 @@ a:hover::after {
         object-fit: cover;
     }
 }
+
 
 .tex{
     font-family: sans-serif;
