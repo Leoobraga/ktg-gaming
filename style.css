@@ -351,6 +351,42 @@ a:hover::after {
         height: auto;
         object-fit: cover;
     }
+
+        .jogadores {
+        padding: 20px 10px;
+    }
+
+     .jogador-container {
+        display: block;
+    }
+
+    .descricao {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .descricao h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .descricao p {
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .foto {
+        float: right;
+        margin-left: 15px;
+        margin-bottom: 10px;
+    }
+
+    .foto img {
+        width: 200px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    }
 }
 
 
@@ -362,4 +398,10 @@ a:hover::after {
 
 .text{
     padding-bottom: 20px;
+}
+
+.mi{
+     text-decoration: underline #6d6337 ;
+     text-underline-offset: 6px;
+     
 }
