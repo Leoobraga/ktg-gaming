@@ -23,7 +23,7 @@ a{
 
 .header{
     background: rgba(0, 0, 0, 0.993);
-    padding-inline: 16px;
+    
     height: 100vh;
     width: 100%;
     
@@ -185,11 +185,7 @@ a:hover::after {
 
 /*jogadores*/
 
-.mi{
-    
-    
-    padding-left: 40px;
-}
+
 
 
 .jogadores {
@@ -202,6 +198,10 @@ a:hover::after {
     padding: 40px;
     box-sizing: border-box;
     color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 8px;
+    
 }
 
 .jogadores h3 {
@@ -213,46 +213,70 @@ a:hover::after {
 
 .jogador-container {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1450px;
+    align-items: flex-start;
     gap: 40px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .descricao {
-    flex: 1;
+    flex: 2;
+    
 }
 
 .descricao h2 {
-    font-size: 28px;
+     font-size: 28px;
     margin-bottom: 15px;
 }
 
 .descricao p {
-    font-size: 18px;
+    font-size: 21px;
     line-height: 1.6;
-    text-align: justify;
-}
+    text-align: justify;}
 
 .foto {
     flex: 1;
     display: flex;
     justify-content: flex-end;
+    padding-top: 40px;
 }
 
 .foto img {
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
     height: auto;
     border-radius: 10px;
     object-fit: cover;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    
 }
 
+.foto-responsiva{
+    float: right;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    width: 300px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(255,255,255,0.2);
+   
+  }
+
+  .info{
+    display: none ;
+}
 
 @media (max-width: 1200px) {
     /* NAVBAR */
+    .foto-responsiva{
+        width: 160px;
+        margin-left: 20px;
+    }
+
     .nav {
         justify-content: space-between;
         position: relative;
@@ -298,40 +322,12 @@ a:hover::after {
         display: flex;
     }
 
-    /* HEADER (parte de cima) */
-    .header {
-        height: auto;
-        padding-bottom: 20px;
-    }
-
-    .jogar-cont {
-        padding: 10px 0;
-    }
-
-    .tex {
-        padding-top: 10px;
-        padding-left: 10px;
-    }
-
-    /* LINE-UPS */
-    .header2 {
-        height: auto;
-        padding-top: 10px;
-        padding-bottom: 20px;
-        justify-content: flex-start;
-    }
-
-    .h22 {
-        font-size: 28px;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
+    /* LINE UPS - GRID 2x2 */
     .jogos-on {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
-        padding: 0 10px;
+        padding: 20px;
         gap: 20px;
         height: auto;
         justify-items: center;
@@ -352,56 +348,78 @@ a:hover::after {
         object-fit: cover;
     }
 
-        .jogadores {
-        padding: 20px 10px;
+    /* JOGADORES - TEXTO COM IMAGEM AO LADO */
+    .jogadores {
+        max-width: 100%;
+        padding: 0 8px;
     }
+  .jogador-container {
+    display: grid;
+     /* texto ocupa o máximo, imagem tamanho natural */
+    gap: 20px;
+    max-width: 100%;
+    width: 100%;
+  }
 
-     .jogador-container {
-        display: block;
-    }
-
-    .descricao {
-        font-size: 16px;
-        line-height: 1.5;
-    }
-
-    .descricao h2 {
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
-
-    .descricao p {
-        font-size: 14px;
-        text-align: justify;
-    }
-
-    .foto {
-        float: right;
-        margin-left: 15px;
-        margin-bottom: 10px;
-    }
-
-    .foto img {
-        width: 120px;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
-    }
-}
-
-
-.tex{
-    font-family: sans-serif;
+  .foto {
+    justify-self: end; /* imagem fica no canto direito */
+    padding-top: 0;
     padding-top: 40px;
-    padding-left: 20px;
-}
+  }
+
+  .foto img {
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(255,255,255,0.2);
+    display: block;
+    
+  }
+
+  .descricao {
+    /* texto ocupa toda a altura, continua embaixo da imagem sem espaços */
+    align-self: start;
+    text-align: justify;
+    font-size: 18px;
+  }
+
+  .descricao h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+  }
+
+  .descricao p {
+    text-align: justify;
+    font-size: 15px;
+  }
+
+  .header2{
+    width: 100%;
+    height: 50vh;
+  }
+
 
 .text{
     padding-bottom: 20px;
+    padding-top: 20px;
 }
 
+.info{
+    font-family: sans-serif;
+    padding-top: 40px;
+    padding-left: 20px;
+    display: block;}
+}
+
+
+
+
+
 .mi{
-     text-decoration: underline #6d6337 ;
+     text-decoration: underline #fbd943 ;
      text-underline-offset: 6px;
-     
+     text-align: center;
+     font-size: 200px;
 }
