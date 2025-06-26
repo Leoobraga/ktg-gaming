@@ -321,4 +321,12 @@ a:hover::after {
     }
 }
 
+.tex{
+    font-family: sans-serif;
+    padding-top: 40px;
+    padding-left: 20px;
+}
 
+.text{
+    padding-bottom: 20px;
+}
