@@ -112,7 +112,7 @@ a:hover::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 200px;
+    
 
     
 }
@@ -270,6 +270,17 @@ a:hover::after {
     display: none ;
 }
 
+.top3{
+    display: none;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width: 1200px) {
     /* NAVBAR */
     .foto-responsiva{
@@ -359,6 +370,11 @@ a:hover::after {
     gap: 20px;
     max-width: 100%;
     width: 100%;
+    padding-top: 50px;
+  }
+
+  .jogar-cont{
+    display: none;
   }
 
   .foto {
@@ -397,8 +413,10 @@ a:hover::after {
 
   .header2{
     width: 100%;
-    height: 50vh;
+    height: 80vh;
   }
+
+
 
 
 .text{
@@ -410,7 +428,12 @@ a:hover::after {
     font-family: sans-serif;
     padding-top: 40px;
     padding-left: 20px;
-    display: block;}
+    display: none;}
+
+    .header{
+    height: 5vh;
+    width: 100%;
+    }
 }
 
 
